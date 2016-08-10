@@ -1,0 +1,365 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial scale=1"/>
+<title>Personal Profile</title>
+<script type="text/javascript" src="jquery-1.7.1.min.js">
+
+</script>
+<style >
+body
+{
+	margin:0;
+	padding:0;
+}
+.container
+{
+	max-width:100%;
+	max-height:auto;
+	background-color:wheat;
+	
+	
+}
+.header
+{
+	width:100%;
+	height:116px;
+	align:center;
+	background-color: #F8F8F8;
+	position:fixed;
+	z-index:2;
+	border-bottom:4px solid #77778B;
+}
+
+.my
+{
+	height: 100px;
+	width: 30%;
+	position: absolute;
+	padding-top: 30px;
+	background-color:#F8F8F8;
+	box-sizing:border-box;
+	color:#77778B;
+	display:inline;
+	float:left;
+	left:10%;
+	text-align:center;
+	font-size:38px;
+	font-family: "Roboto", sans-serif;
+}
+.list
+{
+	width: 30%;
+	height:110px;
+	float:right;
+	background-color:#F8F8F8;
+	
+	
+}
+.list ul li 
+{
+	list-style:none;
+	display:inline-block;
+	padding: 15px 20px;
+	
+	
+}
+.list ul li a 
+{
+	text-decoration:none;
+	text-transform:uppercase;
+	font-family: "Roboto", sans-serif;
+	font-size:20px;
+	color:#77778B;
+	
+}
+.list ul li:hover
+{
+	
+	border-bottom:4px solid #77778B; 
+}
+.intro
+{
+	width:100%;
+	height: 400px;
+	background-color:#1ABC9C;
+	border-left: 4px solid #77778B;
+	border-right: 4px solid #77778B;
+	position:absolute;
+	top:116px;
+	float:left;
+}
+.name
+{
+	width: 70%;
+	height:150px;
+	background-color:#1ABC9C;
+	position:absolute;
+	top:80px;
+	left:10%;
+	text-align:center;
+	padding: 20px 20px;
+	color:#036;
+	font-family: "Roboto", sans-serif;
+	font-size:60px;
+}
+
+#about
+{
+	width:100%;
+	height: 840px;
+	background-color:#474E5D;
+	position:absolute;
+	top:516px;
+}
+.me
+{
+	width: 70%;
+	height:478px;
+	background-color:#474E5D;
+	margin-top:11px;
+	margin-left:16%;
+	
+}
+.me dt 
+{
+	font-family: "Roboto", sans-serif;
+	font-size:50px;
+	color:white;
+	padding: 30px 4%;
+	text-align:center;
+}
+.me ul li
+{
+	list-style:none;
+    border-bottom: 1px solid  #999;
+}
+.me ul li span
+{
+	color: white;
+	font-size: 30px;
+}
+#skills
+{
+	width:100%;
+	height: 414px;
+	background-color: white;
+	position:absolute;
+	top: 1356px;
+	
+}
+#skills dt
+{
+	text-align:center;
+	color:#555555;
+	padding: 30px;
+	font-family: "roboto", sans-serif;
+	font-size: 50px;
+	
+}
+#skills ul li
+{
+	list-style:none;
+	display:inline;
+	padding: 30px 20px;
+	text-align:center;
+	margin-left:12%;
+	color:#066;
+	font-family: "Roboto" , sans-serif;
+}
+#edu
+{
+	width:100%;
+	height: 600px;
+	position:absolute;
+	background-color:#999;
+	top: 1770px;
+}
+#edu dt
+{
+	text-align:center;
+	color:white;
+	border-bottom: 4px solid #666;
+	padding: 30px;
+	font-family: "roboto", sans-serif;
+	font-size: 50px;
+	
+}
+#high
+{
+	width:20%;
+	height: 300px;
+	border: 5px solid #666;
+	
+	float:left;
+	margin-left:20%;
+	background-image:url(mps.jpg);
+	background-size: 100% 100%;
+}
+#clg
+{
+	width:20%;
+	height:300px;
+	border: 5px solid #666;
+	
+	float:right;
+	margin-right: 20%;
+	background-image:url(download.jfif);
+	background-size: 100% 100%;
+	
+}
+#high:hover
+{
+	opacity:0.5;
+}
+#clg:hover
+{
+	opacity:0.5;
+}
+#sch 
+{
+	width:100%;
+	height:100px;
+	
+	background-color:#999;
+	clear:both;
+}
+#sch ul li
+{
+	display:inline-block;
+	list-style:none;
+	margin-left:18%;
+	padding:10px 110px;
+	color:white;
+	font-family:"roboto", sans-serif;
+}
+
+#contact
+{
+	width:100%;
+	height:300px;
+	background-color:white;
+	position:absolute;
+	top: 2442px;
+}
+#contact dt
+{
+	text-align:center;
+	color:#555555;
+	padding: 30px;
+	font-family: "roboto", sans-serif;
+	font-size: 50px;
+}
+#cntctlist
+{
+	width:100%;
+	height:100px;
+	
+}
+#cntctlist ul li
+{
+	list-style:none;
+	display:inline-block;
+	padding: 60px;
+	color:#666;
+	margin-left: 10%;
+	
+	
+}
+#cntctlist ul li img
+{
+	height:30px;
+	width:30px;
+}
+.photo
+{
+	width:20%;
+	height: 344px;
+	background-color: red;
+	z-index: 1;
+	position: absolute;
+	top:20px;
+	border-radius:300px;
+	right:30px;
+	border: 5px solid #036;
+	background-image:url(FB_20150603_22_20_41_Saved_Picture.jpg);
+	background-size: 100% 100%;
+	
+	
+	
+}
+</style>
+
+</head>
+
+
+<body>
+<div class="container">
+<div class="header">
+  <div class="my">  MY PERSONAL PAGE </div>
+     <div class="list">
+    		<ul>
+            <li> <a href="#about"> About </a> </li>
+            <li> <a href="#skills"> Skills </a> </li> 
+            <li> <a href="#edu"> Education </a> </li>
+            <li> <a href="#contact"> Contact </a></li>
+            </ul>
+    </div>
+    </div>
+    <div class="intro">
+    		<div class="name"> <b> Hi!!  &nbsp I'm Ekroop Kaur Cheema </b> <br/>
+                   <font size="2" color="white">            I am a second year UnderGraduate Student in the department of Chemistry, <font color="whites"> IIT Kharagpur </font> </font>
+             </div>
+             <div class="photo"> 
+             </div> 
+    </div>
+    <div id="about">
+    	<div class="me">
+        <br> <br> <br> <br>   
+        <dt> ABOUT ME </dt>
+        <dd> <font color="#CCCCCC" family="comic sans MS">I am a second year undergraduate student in the Department of Chemistry, in the Indian Institute of Technology, Kharagpur. I am from Punjab and currently residing in SN/IG Hall of Residence , IIT Kaharagpur. </font> </dd>
+        <br> <br> <br> <br>
+        <dt> PERSONAL INFORMATION </dt>
+        <ul> 
+        <li> <span> NAME :</span> <font color="#CCCCCC"> Ekroop Kaur Cheema </font>  </li> 
+        <li> <span>  AGE : </span> <font color="#CCCCCC">  18yrs </font> </li> 
+        <li> <span> COLLEGE : </span> <font color="#CCCCCC"> IIT, Kharagpur </font> </li> 
+        <li> <span> EMAIL-ID : </span> <font color="#CCCCCC"> ekroop.cheema33@gmail.com </font> </li>
+        <li> <span> Contact : </span> <font color="#CCCCCC"> 9041640166 </font> </li> 
+        </ul>
+        </div> 
+    </div>
+    <div id="skills"><br> <br> <br> <br> <dt> SKILLS </dt>
+    <dd> <center> <font size="3" color="#003333"> I have good typing skills and further more , I am confident with the following <b> Web Designing  </b>Skills:  </font> </dd> 
+     	<ul>
+    		<li> HTML </li>
+    		<li> CSS</li>
+    		<li> J Query</li>
+    		<li> Javascript </li>
+    		<li> PHP </li>
+    	</ul> </center>
+    </div>
+	<div id="edu"> <br> <br> <br>
+    	<dt> EDUCATION </dt> <br> <br>
+        <div id="high"> <center> MUKAT PUBLIC SCHOOL </center> </div>  <div id="clg"> <font color="#333399" size="1">INDIAN INSTITUTE OF TECHNOLOGY, KHARAGPUR  </font> </div> <br>
+        <div id="sch">  
+        <ul> <li> HIGH SCHOOL </li> <li> COLLEGE </li> </ul>
+        </div>
+    </div>
+    <div id="contact">  <br> <br> 
+    <dt> <b> CONTACT ME </b> </dt>
+    <br>
+    <div id="cntctlist">
+    	<ul>
+        <li> <img src="google_gmail.png" /> &nbsp ekroop.cheema33@gmail.com </li>
+        <li> <img src="facebook.png" /> &nbsp Ekroop Cheema </li>
+        <li> <img src="icontexto_user_web20_linkedin.png" /> &nbsp Ekroop Kaur Cheema </li>
+        </ul>
+        
+    </div>
+    
+    </div>
+</div>
+</body>
+</html>
